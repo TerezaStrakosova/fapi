@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #203960;
+}
+
+/* Formulář */
+section {
+    width: 50vh;
+    margin: 10% auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#537DC6;
+    border-radius: 2%;
+    box-shadow: 2px 2px 10px rgb(45, 45, 45);
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+form {
+    text-align: center;
+}
+
+
+form input {
+    padding: 5px 10px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 2px;
+    border: none;
+}
+
+form input[type="submit"]{
+    display: block;
+    margin: 8px auto 0 auto;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #203960;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover{
+    background-color: #2037608e;
+    color: white;
+    border-radius: 5px;
+    transition: all linear 0.3s;
+}
+
+form p {
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form label {
+    color: white;
+}
+
+form div {
+    margin-top: 10px;
+    color: white;
+    text-align: left;
+}
+
+form #submitBtn {
+    display: none;
+}
+
+
+/* potvrzení.html */
+#shrnuti h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#shrnuti div {
+    color: white;
+    margin-left: 20px;
+}

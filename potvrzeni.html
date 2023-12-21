@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rekapitulace objednávky</title>
+</head>
+<body>
+    <section id="shrnuti">
+        <h1>Shrnutí objednávky</h1>
+        <div>
+            <p id="confirmationFirstName"></p>
+            <p id="confirmationSecondName"></p>
+            <p id="confirmationEmail"></p>
+            <p id="confirmationProductName"></p>
+            <p id="confirmationPrice"></p>
+            <p id="confirmationAmount"></p>
+        </div>
+    </section>
+    
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        // Načtení hodnot ze sessionStorage
+        let firstName = sessionStorage.getItem("first_name");
+        let secondName = sessionStorage.getItem("second_name");
+        let email = sessionStorage.getItem("email");
+        let productName = sessionStorage.getItem("product_name");
+        let price = sessionStorage.getItem("price");
+        let amount = sessionStorage.getItem("amount");
+    
+        // Zobrazení informací na stránce
+        document.getElementById("confirmationFirstName").textContent = `Křestní jméno: ${firstName}`;
+        document.getElementById("confirmationSecondName").textContent =`Příjmení: ${secondName}`;
+        document.getElementById("confirmationEmail").textContent = `Email: ${email}`;
+        document.getElementById("confirmationProductName").textContent = `Produkt: ${productName}`;
+        document.getElementById("confirmationPrice").textContent = `Cena: ${price} Kč`;
+        document.getElementById("confirmationAmount").textContent = `Počet kusů: ${amount}`;
+    });
+    </script>
+</body>
+
+
+
+</html>

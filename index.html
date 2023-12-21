@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Objednávka</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Objednávací formulář</h1>
+            <form id="order_form">
+                <input type="text" placeholder="Jméno" id="first_name"><br>
+                <input type="text" placeholder="Příjmení" id="second_name" ><br>
+                <input type="email" placeholder="Email" id="email" ><br>
+                <input type="text" placeholder="Název produktu" id="product_name"><br>
+                <input type="number" id="price" placeholder="Cena v Kč" min="1" onchange="changePrice(event), changeTotalPrice(event)"><br>
+                <input type="number" id="amount" placeholder="Počet kusů" min="1"onchange="changeAmount(event), changeTotalPrice(event)"><br>
+                <p>V jaké další měně si přejete znát cenu produktu?</p>
+                <input type="radio" id="eur" name="currency" value="EUR" checked onchange="changeCurrency(event), changeTotalPrice(event)">
+                <label for="eur">Euro</label>
+                <input type="radio" id="gbp" name="currency" value="GBP" onchange="changeCurrency(event), changeTotalPrice(event)">
+                <label for="gbp">Libra</label>
+                <input type="radio" id="usd" name="currency" value="USD" onchange="changeCurrency(event), changeTotalPrice(event)">
+                <label for="usd">Dolar</label>
+                <div>
+                    <p id="recap"></p>
+                    <p id="product"></p>
+                    <p id="product_amount"></p>
+                    <p id="total_price"></p>
+                    <p id="total_price_dph"></p>
+                    <p id="euro"></p>
+                    <p id="summary"></p>
+                </div>
+                <input type="submit" id="submitBtn" value="Odeslat objednávku" onclick="sendOrder(event)">
+            </form>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
